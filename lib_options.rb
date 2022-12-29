@@ -20,7 +20,7 @@ module Actions
       puts 'No person available'
     else
       @people.each do |person|
-        puts "[#{person.class}] Name: #{person.name}, ID: #{person.id}, Age: #{person.age}"
+        puts person
       end
     end
   end
