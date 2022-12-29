@@ -10,7 +10,7 @@ module Actions
       puts 'No books available'
     else
       @books.each do |book|
-        puts "Title: #{book.title}, Author: #{book.author}"
+        puts book
       end
     end
   end
