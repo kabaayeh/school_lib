@@ -1,11 +1,7 @@
 require_relative 'app'
 
-def main
-  puts menu
-end
-
  # App Menu
- def menu
+ def menu(app)
   puts 'Welcome to School Library App!'
   loop do
     puts ''
@@ -21,7 +17,6 @@ end
     user_input = gets.chomp.to_i
     puts ''
 
-    app = App.new
     case user_input
     when 1..6 then app.run_option(user_input)
     when 7 then puts 'Thank you for using the app!'
@@ -29,6 +24,11 @@ end
     end
     break unless user_input != 7
   end
+end
+
+def main
+  app = App.new
+  puts menu(app)
 end
 
 main
